@@ -27,7 +27,10 @@ File { backup => false }
 #$test_top_scope = "Top Scope"
 node /slave.zippyos.com/ {
       include ssh
-     }
+  notify { 'test-message-for-slave':
+    message => 'this is slave using a node',
+  }
+  }
 
 node default {
  # $test_top_scope = "This node scope!"
