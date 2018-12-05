@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # A Puppet Control Repository
 
 * [What You Get From This control\-repo](#what-you-get-from-this-control-repo)
@@ -117,3 +118,6 @@ If you use Puppet Enterprise and have not yet enabled and configured Code Manage
 
 * <https://github.com/Puppet-RampUpProgram/control-repo>
 
+=======
+# puppet-control
+>>>>>>> 72ec8fc2a4628c6a95544761cf187818445dfbb5
