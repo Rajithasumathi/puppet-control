@@ -12,7 +12,6 @@
 ## Active Configurations ##
 
 # Disable filebucket by default for all File resources:
-#https://docs.puppet.com/pe/2015.3/release_notes.html#filebucket-resource-no-longer-created-by-default
 File { backup => false }
 
 # DEFAULT NODE
@@ -25,8 +24,19 @@ File { backup => false }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+#$test_top_scope = "Top Scope"
+node /slave.zippyos.com/ {
+      include ssh
+     }
+
 node default {
+ # $test_top_scope = "This node scope!"
+ # $node_scope_var = "Node scope"
+ # notify { "test_top_scope":
+  #  message => "This is a top scope var: ${test_top_scope}"
+#}
   # This is where you can declare classes for all nodes.
   # Example:
-  #   class { 'my_class': }
+  # class { 'my_class': }
+    
 }
